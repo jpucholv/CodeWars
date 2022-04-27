@@ -12,7 +12,11 @@ def domain_name(url):
         domain = url.split(".")
         return domain[1]
     
-    else:
+    elif "http" in url:
         domain = url.split("//")
         domain = domain[1].split(".")
+        return domain[0]
+    
+    else:
+        domain = url.split(".")
         return domain[0]
