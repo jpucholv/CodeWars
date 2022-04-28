@@ -20,3 +20,10 @@ def domain_name(url):
     else:
         domain = url.split(".")
         return domain[0]
+
+"""
+Best solution:
+
+def domain_name(url):
+    return url.split("//")[-1].split("www.")[-1].split(".")[0]
+"""
