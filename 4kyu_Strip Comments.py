@@ -23,8 +23,6 @@ def solution(string, markers):
     strList = string.splitlines()
     index = 0
 
-    print(strList)
-
     for str in strList:
         for mark in markers:
             if str.find(mark) != -1:
@@ -33,6 +31,8 @@ def solution(string, markers):
         index += 1
 
     return '\n'.join(strList)
+
+print (solution("apples, pears # and bananas\ngrapes\nbananas !apples", ["#", "!"]))
 
 '''
 Best solution:
